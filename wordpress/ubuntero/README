@@ -1,0 +1,101 @@
+===============================================
+Códigos especiais para os conteúdos dos post's
+
+// Vídeo ocupando toda a largura do post com suporte a tela responsiva:
+<div class="video"><iframe src="http://www.youtube.com/embed/S6-rAv6bU8Q" frameborder="0" width="560" height="315"></iframe></div>
+
+ou 
+
+<p class="video"><iframe src="http://www.youtube.com/embed/S6-rAv6bU8Q" frameborder="0" width="560" height="315"></iframe></p>
+
+
+// Comandos "sem caixa de terminal"
+<pre>
+sudo apt-get update; sudo apt-get upgrade
+</pre>
+
+
+// Comandos "com caixa de terminal"
+<div class="terminal">
+sudo add-apt-repository ppa:tombeckmann/ppa; sudo apt-get update <span class="enter"> ENTER </span>
+</div>
+
+
+// Centralizar uma imagem no post com suporte a tela responsiva
+colocar: class="aligncenter na tag "img"
+exemplo 1 (sem link para ampliar):
+<img class="aligncenter src="URL DA IMAGEM" alt="DESCRIÇÃO DA IMAGEM" width="LARGURA DA IMAGEM" height="ALTURA DA IMAGEM" />
+
+exemplo 2 (com link para ampliar):
+<a href="URL DA IMAGEM AMPLIADA" title="DESCRIÇÃO DA IMAGEM AMPLIADA" rel="lightbox"><img class="aligncenter src="URL DA IMAGEM" alt="DESCRIÇÃO DA IMAGEM" width="LARGURA DA IMAGEM" height="ALTURA DA IMAGEM" /></a>
+
+
+// Lista de imagens em forma de galeria
+<h2>Fotos do robô</h2>
+<ul class="gallery">
+<li><a href="URL DA IMAGEM AMPLIADA" title="DESCRIÇÃO DA IMAGEM AMPLIADA" rel="ligthbox-album"><img class="size-medium" src="URL DA MINIATURA DA IMAGEM" alt="DESCRIÇÃO DA MINIATURA" width="150" height="110" /></a></li>
+<li><a href="URL DA IMAGEM AMPLIADA" title="DESCRIÇÃO DA IMAGEM AMPLIADA" rel="ligthbox-album"><img class="size-medium" src="URL DA MINIATURA DA IMAGEM" alt="DESCRIÇÃO DA MINIATURA" width="150" height="110" /></a></li>
+<li><a href="URL DA IMAGEM AMPLIADA" title="DESCRIÇÃO DA IMAGEM AMPLIADA" rel="ligthbox-album"><img class="size-medium" src="URL DA MINIATURA DA IMAGEM" alt="DESCRIÇÃO DA MINIATURA" width="150" height="110" /></a></li>
+<li><a href="URL DA IMAGEM AMPLIADA" title="DESCRIÇÃO DA IMAGEM AMPLIADA" rel="ligthbox-album"><img class="size-medium" src="URL DA MINIATURA DA IMAGEM" alt="DESCRIÇÃO DA MINIATURA" width="150" height="110" /></a></li>
+</ul>
+
+// texto com fundo cinza (nome de pacotes, comandos, etc)
+exemplo 1:
+Utilize o comando <code>update-manager -d</code>.
+
+exemplo 2:
+A WebRTC poderá habilitar digitando <code>about:config</code> na barra de navegação, depois procure por <code>media.peerconnection.enabled</code>, <code>media.navigador.enabled</code> e <code>media.navigator.permission.disabled</code> e mude o campo valor para <code>true</code>.
+
+
+
+
+===============================================
+Modificações para otimizar o desempenho
+
+wp.config.php -> raiz do wordpress
+header.php -> raiz do tema
+
+# wp.config.php
+
+/********** Configurações Personalizadas ********************************************/
+// Revisões de post
+define('WP_POST_REVISIONS', 3); // Máximo de 3 revisões
+
+// Dessem abilitar gravação de revisões
+//define('WP_POST_REVISIONS', false);
+
+// Habilitar cache
+define('WP_CACHE', true);
+define('ENABLE_CACHE', true);
+define('CACHE_EXPIRATION_TIME', 3600);
+
+// Otimizar automaticamente as tabelas do banco de dados
+define('WP_ALLOW_REPAIR', true);
+
+// configurações para reduzir requisições no banco de dados para informações fixas
+define('WP_HOME', 'http://'.$_SERVER['HTTP_HOST'].'/ubuntero.com.br'); // trocar echo get_option('home') por echo WP_HOME no tema
+define('WP_SITEURL', 'http://'.$_SERVER['HTTP_HOST'].'/ubuntero.com.br'); // trocar bloginfo('url') por echo WP_SITEURL no tema
+
+/***********************************************************************************/
+
+
+# header.php
+
+Trocar:
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" <?php language_attributes(); ?> xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="https://www.facebook.com/2008/fbml">
+Por:
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" dir="ltr" lang="pt-BR" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="https://www.facebook.com/2008/fbml">
+
+Trocar:
+<meta http-equiv="content-type" content="<?php bloginfo('html_type') ?>; charset=<?php bloginfo('charset') ?>" />
+<meta http-equiv="content-language" content="<?php bloginfo('language'); ?>" />
+Trocar:
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-language" content="pt-BR" />
+
+Trocar:
+<a href="<?php echo get_option('home'); ?>">Home</a>
+Por:
+<a href="<?php echo WP_HOME; ?>">Home</a>
+
+

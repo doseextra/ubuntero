@@ -1,0 +1,306 @@
+/*
+Theme Name: Ubuntero
+Theme URI: http://www.ubuntero.com.br/
+Description: Designed by <a href="http://www.ubuntero.com.br">Ubuntero</a>
+
+Author: Rudinei Weschenfelder - Equipe Ubuntero
+Author URI: http://www.ubuntero.com.br/
+Version: 0.1
+
+License: Creative Commons 3.0
+License URI: http://creativecommons.org/licenses/by/3.0
+*/
+
+/* reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td { margin:0; padding:0; border:0; outline:0; font-size:100%; font-family:inherit; vertical-align:baseline; }
+:focus { outline:0; }
+a:active { outline:none; }
+table { border-collapse:separate; border-spacing:0; }
+caption,th,td { text-align:left; font-weight:normal; }
+blockquote:before,blockquote:after,q:before,q:after { content:""; }
+blockquote,q { quotes:"" ""; }
+/* reset end */
+
+/************************************************************************************
+STRUCTURE
+*************************************************************************************/
+#pagewrap {
+	width: 980px;
+	margin: 0 auto;
+}
+#header {
+	height: auto;
+}
+#content {
+	width: 660px;
+	float: left;
+}
+#sidebar {
+	width: 300px;
+	float: right;
+}
+#footer {
+	clear: both;
+}
+
+/************************************************************************************
+MEDIA QUERIES
+*************************************************************************************/
+/* for 980px or less */
+@media screen and (max-width: 980px) {
+	#pagewrap {
+		width: 96%;
+	}
+	#content {
+		width: 65%;
+	}
+	#sidebar {
+		width: 30%;
+	}
+}
+
+/* for 800px or less */
+@media screen and (max-width: 800px) {
+	#content {
+		width: auto;
+		float: none;
+	}
+	#sidebar {
+		width: auto;
+		float: none;
+	}
+}
+
+/* for 700px or less */
+@media screen and (max-width: 700px) {
+	#content {
+		width: auto;
+		float: none;
+	}
+	#sidebar {
+		width: auto;
+		float: none;
+	}
+}
+
+/* for 480px or less */
+@media screen and (max-width: 480px) {
+	#header {
+		height: auto;
+	}
+	h1 {
+		font-size: 24px; line-height:125%;
+	}
+	#menu {
+		margin-bottom:10px;
+	}
+	.adstop, .adsbottom, .adsmiddle  {
+		display: none;
+	}
+	/*
+	#sidebar {
+		display: none;
+	}
+	*/
+}
+
+/* border & guideline (you can ignore these) */
+#header, #content, #sidebar {
+	margin-bottom: 10px;
+}
+
+/************************************************************************************
+CONTEUDO
+*************************************************************************************/
+body { font-size: 1em;  color:#333;  font-family: Ubuntu, Arial, Helvetica, sans-serif; background: url(images/bg_dotted.png); line-height:120%; }
+a { /*color: #DD4814;*/ color:#963716; text-decoration: none; transition:all 0.9s ease; -webkit-transition:all 0.9s ease; -o-transition:all 0.9s ease; -moz-transition:all 0.9s ease; }
+a:hover { text-decoration: underline; color:#963716; }
+h1 { font-size:150%; }
+h1 a, .t2 a { color:#DD4814; }
+::selection{ color:#FFF; background:#DD4814; }
+::-moz-selection{ color:#FFF; background:#DD4814; }
+
+/* Comandos para Terminal */
+code, samp, pre, kbd { font-family: "Courier New", Courier, monospace, sans-serif; text-align:left; color:#000; background:#EEE; font-size: 90%; }
+pre code { line-height: 1.6em; }
+pre { padding: 0.1em 0.5em 0.3em 0.7em; border-left: 10px solid #DD4814; margin: 1.7em 0 1.7em 0.3em; overflow: auto; width: 95%; }
+code { padding: 2px 5px; }
+/* target IE7 and IE6 */
+*:first-child+html pre { padding-bottom: 2em; overflow-y: hidden; overflow: visible; overflow-x: auto; }
+* html pre { padding-bottom: 2em; overflow: visible; overflow-x: auto; }
+
+/* Menu */
+#menu { float:right; font-size:80%; }
+#menu ul, #menus ul li{ position:relative; z-index: 999; }
+#menu ul{ list-style:none; float:left; }
+#menu ul li{ display:inline; float:left; position:relative;  background:#DD4814; margin-left:6px; margin-top:4px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; }
+#menu ul li:hover{ background:#FF6E3B; box-shadow:1px 2px 2px #CCC; -moz-box-shadow:1px 2px 2px #CCC; -webkit-box-shadow:1px 2px 2px #CCC; }
+#menu ul li a{ float:left; text-decoration:none; color:#FFF; padding:4px 8px;  }
+#menu ul li ul{ display:none; position:absolute; top:29px; left:0; float:left; background:#DD4814; }
+#menu ul li:hover ul{ display:block; z-index:200; }
+#menu ul li ul li{ display:inline; float:left; }
+#menu ul li ul li a{ display:inline; float:left; width:150px; font-size:14px; padding:5px; border-bottom:1px #DD4814 solid; z-index:200; }
+
+.logo { padding:25px 0 15px 0; }
+.logo span { padding-left:10px; }
+
+#content { background: #FFF; box-shadow:1px 3px 3px #F1F1F1; -moz-box-shadow:1px 3px 3px #F1F1F1; -webkit-box-shadow:1px 3px 3px #F1F1F1; padding-bottom:1px; }
+#content img.aligncenter { display:block; margin:10px auto; }
+
+#archive { margin-bottom: 25px; border: 0; }
+#archive span, .no-results span { color: #c22; text-decoration: underline; }
+
+.post, .page { margin-bottom:20px; padding:0 5px; background: #FFFFFF; border-top:4px solid #DD4814; border-bottom: 1px dotted #ccc; }
+.post img, .page img { max-width:100%; margin:5px; }
+.post h1, .page h1, .entry h1, .t1, .t2 { margin:15px 0 10px 0; text-shadow: 2px 2px 2px rgb(204, 200, 200); line-height:130%; }
+.post h2, .post h3, .page h2, .page h3 { margin:15px 0 5px 0;}
+.post h2, .page h2 { font-size:140%; }
+.post h3, .page h3 { font-size:120%; }
+.post ol, .post ul, .page ol, .page ul  { margin:0 0 0 30px; padding:0; }
+.post ul li, .page ul li, .post ol li, .page ol li { margin:5px 0; }
+.post ul li a, .page ul li a, #sidebar ul li a{ transition:all 0.5s ease; -webkit-transition:all 0.5s ease; -o-transition:all 0.5s ease; -moz-transition:all 0.5s ease; }
+.post ul li a:hover, .page ul li a:hover, #sidebar ul li a:hover{ margin-left:10px; }
+
+.entry { font-size:90%; }
+.entry p { margin:15px 0; line-height:150%;}
+
+/* Galeria de Fotos */
+.post .gallery { clear:both; width:100%; }
+.post .gallery li { list-style:none; display:inline; width:auto; }
+.post .gallery li img:hover { opacity:.7;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";filter: alpha(opacity=70); }
+.post .gallery li a:hover { margin:0; }
+
+.wp-caption { background-color: #f3f3f3; border: 1px solid #ddd; -khtml-border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; margin: 10px; padding-top: 4px; text-align: center; }
+.wp-caption p.wp-caption-text { font-size: 90%; line-height: 120%; margin: 0; padding: 0 4px 5px; }
+
+.entry-meta { margin-bottom:7px; }
+.entry-meta p, .post-utility p { font-size:80%; color:#686868; font-style:italic; line-height:30px; }
+.entry-meta img { vertical-align: bottom; margin-left:5px; }
+
+.post-utility { border-top:1px dotted #ccc; margin-top:5px; padding-top:5px; }
+
+.wp-post-image { float:left; margin:5px 5px 10px 0; }
+
+/* Social Content */
+.share { margin:5px auto; border: 1px solid #EEE; background:#F7F7F7; height:auto; display:table; width:98%; padding:6px 3px 3px 3px; border-radius:3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; -moz-box-shadow: inset 0 0 5px #f1f1f1; -webkit-box-shadow: inset 0 0 5px #f1f1f1; box-shadow: inset 0 0 5px #f1f1f1; }
+.share span { float:left; margin:0 5px; font-size:85%; }
+.share img { margin-left:5px; }
+
+/* Biografia autor */
+.autor { margin:15px 0 0 0; padding:0 5px 5px 0; border-bottom:1px solid #f1f1f1; display:table; font-size:80%; }
+.autorimg { float:left; margin:0 5px 0 0; border:3px solid #CCC; }
+.autor img:hover, .autorsocial:hover { opacity:.7;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";filter: alpha(opacity=70); }
+.autorsocial { background-image: url(images/sprite-otimizado.png); display:block; width:16px; height:16px; margin: 3px 6px; }
+.autortwitter {  background-position:-18px -189px; }
+.autorfacebook { background-position:-36px -189px; }
+.autorgoogleplus { background-position:0 -189px; }
+
+/* Sidebar */
+#sidebar ul, #sidebar form { margin:5px 5px 15px 5px; }
+#sidebar ol, #sidebar ul { list-style:none; }
+#sidebar ul li, #sidebar h3 { margin:5px; }
+#sidebar h3 { padding-bottom:5px; font-size:120%; }
+#sidebar li, #sidebar option { font-size:90%; }
+#sidebar .side-box { margin-bottom:30px; }
+#sidebar .side-box, #footer { background: #FFFFFF; border-top:4px solid #DD4814; box-shadow:1px 2px 2px #F1F1F1; -moz-box-shadow:1px 2px 2px #F1F1F1; -webkit-box-shadow:1px 2px 2px #F1F1F1; padding-bottom:1px; }
+
+.side-archives select { width:99%; font-size:90%; padding:5px; margin: 0; -webkit-border-radius:4px; -moz-border-radius:4px; border-radius:4px; -webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset; -moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset; box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset; background: #f8f8f8; border:none; outline:none; display: inline-block; -webkit-appearance:none; -moz-appearance:none; appearance:none; cursor:pointer; }
+/* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+.side-archives select {padding-right:18px}
+}
+.side-archives label { position:relative }
+.side-archives label:after { content:'<>'; font:14px "Consolas", monospace; color:#aaa; -webkit-transform:rotate(90deg); -moz-transform:rotate(90deg); -ms-transform:rotate(90deg); transform:rotate(90deg); right:8px; top:2px; padding:0 0 2px; border-bottom:1px solid #E7E7E7;
+ position:absolute; pointer-events:none; }
+.side-archives label:before { content:''; right:6px; top:0px; width:20px; height:20px; background:#f8f8f8; position:absolute; pointer-events:none; display:block; }​
+
+
+
+/* Comentários */
+#comments, #cancel-comment-reply{ margin:4px; }
+#respond h3 { margin:4px; font-size:120%; }
+#commentform { margin-top: 15px; }
+#commentform p { margin: 5px; }
+.commentlist { margin:5px; }
+.commentlist li { list-style: none; }
+.commentlist li ul { margin-left: 20px; }
+.commentlist li .comment-body { background: #eee; padding: 5px; margin-bottom: 10px; }
+.commentlist img { float: left; margin:5px 5px 5px 0; }
+.commentlist p { clear: both; margin: 5px 0; color: #555; }
+.reply { text-align: right; }
+#respond, .reply, .commentlist { font-size:85%; }
+.comment-awaiting-moderation { color: #DD4814; }
+.commentbalao { width:43px; height:42px; padding:0 2px 0 0; margin:0 5px; float:right; background-position:-28px 0; text-align:center; line-height:29px; font-size:90%; }
+
+/* Posts Relacionados */
+.related-posts { border-top:1px dotted #ccc; padding-top:20px; margin-bottom:10px; }
+.related-posts h3 { margin-top:5px; }
+.related { font-size:90%; width:24%; float:left; margin:0 2px; text-align:center; padding-bottom:5px; border:1px solid #FFF; }
+.related:hover { background:#EEE; border:1px solid #ccc; }
+.related p { clear:both; }
+.related img { display: block; margin-left: auto; margin-right: auto; }
+.related .wp-post-image { float:none; margin-left: auto; margin-right: auto; display: block; }
+
+/* Social Sidebar */
+#social { margin:0 0 25px 7px; overflow:hidden; }
+#social .sprite { width:41px; height:41px; display:block; margin:0 0 5px 5px;}
+#social p { margin:0; }
+#social-rss a {background-position:0 -43px;}
+#social-twitter a {background-position:-41px -43px;}
+#social-facebook a {background-position:-82px -43px;}
+#social-gplus a {background-position:0 -84px;}
+#social-youtube a {background-position:-41px -84px;}
+.social-box { width:58px; text-align:center; margin:0 2px 0 0; }
+.social-box a { opacity:1;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";filter: alpha(opacity=100); }
+.social-box a:hover { opacity:.7;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";filter: alpha(opacity=70); }
+.social-box-margin, .social-box-last { margin:0; }
+
+/* farmulário de busca */
+#searchform input { border-radius:3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; -moz-box-shadow: inset 0 0 5px #f1f1f1; -webkit-box-shadow: inset 0 0 5px #f1f1f1; box-shadow: inset 0 0 5px #f1f1f1; padding:4px; }
+#searchform #s { padding-bottom:7px; width:80%; }
+
+/* Footer */
+#footer { font-size:80%; margin-bottom:5px; }
+#footer ul { list-style:none; margin:5px; }
+#footer ul li { display:inline; margin:0 5px; }
+#footer p { clear:both; margin-left:10px; }
+
+/* Paginação */
+.paginacao { margin:20px; font-size:90%; }
+.paginacao span { margin:0 5px; padding:3px 8px; }
+.paginacao a { border:1px solid #ccc; padding:3px 8px; margin:0 2px; text-decoration:none;}
+.paginacao a:hover { border:1px solid #ccc; text-decoration:none; color:#000; background-color: #ccc;}
+
+/* Ads */
+.adstop, .adsbottom, .adsmiddle, .adssidebar { text-align:center; }
+.adstop { margin-top:10px; }
+.adsbottom { margin:20px 0; }
+.adsmiddle { margin:10px 0 20px 0; }
+.adssidebar { margin-bottom:15px; }
+
+/* Box Terminal */
+.terminal { width: auto; background: #39152E url(images/barra-terminal.jpg); background-position: top left;	background-repeat: no-repeat;	padding-bottom: 10px; padding-left: 10px; padding-right: 10px; padding-top: 35px; text-align: left; color: #ffffff; font-style:italic;  font-size:90%;}
+
+/* Video Youtube responsivo post */
+.video { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden; }
+.video iframe, .video object, .video embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+/* link estilo botão */
+.button { text-align:center; font-style:italic; }
+.button a{ -moz-border-radius:4px; -webkit-border-radius:4px; background:#DD4814; border-radius:4px; color:#fff; padding:7px 14px; }
+.button a:hover{ background:#FF6E3B; }
+
+.side-video { text-align:center; }
+.clear { clear:both; }
+.sprite {background-image: url(images/sprite-otimizado.png);}
+.float-left, .left { float:left; }
+.float-right, .right { float:right; }
+.no-results p { padding:20px 0; }
+.banner-blog { border:1px solid #CCC; }
+.tcenter { text-align:center; }
+.tleft { text-align:left; }
+.tright { text-align:right; }
+
+.calendario table { border:1px dotted #CCC; background:#f1f1f1; border-collapse:collapse; }
+.calendario td { padding:2px 5px; border:1px dotted #CCC; }
+.calendario  tr:hover { background:#DDD; }
