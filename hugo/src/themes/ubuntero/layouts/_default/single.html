@@ -2,10 +2,9 @@
 	<div id="content" >
 		<div class="entry post">
 			{{ partial "ads/adstop.html" . }}
-
 			<h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
 			<div class="post-utility">
-				<p>Tags: {{ with .Params.Tags }} {{ range .}} <a href="/tags/{{ . | urlize }}">{{ . }}</a>,  {{ end }} {{ end }}</p>
+				<p>Tags: {{ with .Params.Tags }} {{ range .}} <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>,  {{ end }} {{ end }}</p>
 			</div>
 
 			<div class="entry-meta">

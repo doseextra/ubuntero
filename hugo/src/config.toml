@@ -1,4 +1,4 @@
-baseURL = "http://ubuntero.com.br/"
+baseURL = "https://rtomkiel.github.io/ubuntero-site"
 languageCode = "pt-br"
 title = "Ubuntero"
 theme = "ubuntero"

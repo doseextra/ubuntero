@@ -24,7 +24,7 @@
 			</div>
 
 			<div class="post-utility">
-				<p>Tags: {{ with .Params.Categories }} {{ range .}} <a href="/categories/{{ . | urlize }}">{{ . }}</a>,  {{ end }} {{ end }}</p>
+				<p>Tags: {{ with .Params.Categories }} {{ range .}} <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>,  {{ end }} {{ end }}</p>
 			</div>
 
 			<div class="entry-meta">
