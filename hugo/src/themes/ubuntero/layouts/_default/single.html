@@ -1,0 +1,71 @@
+{{ partial "global/header.html" . }}
+	<div id="content" >
+		<div class="entry post">
+			{{ partial "ads/adstop.html" . }}
+
+			<h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
+			<div class="post-utility">
+				<p>Tags: {{ with .Params.Tags }} {{ range .}} <a href="/tags/{{ . | urlize }}">{{ . }}</a>,  {{ end }} {{ end }}</p>
+			</div>
+
+			<div class="entry-meta">
+				<div class="commentbalao sprite">#</div>
+			</div>
+
+			<div class="entry">
+				{{ .Content }}
+			</div>
+
+			<div class="post-utility">
+				<p align="right">Publicado em {{ .Date.Format "2 de Jan de 2006" }} | <a href="{{ .Permalink }}">Deixe um comentário </a></p>
+			</div>
+
+			<div class="share">
+				<span style="margin-top:8px;">Compartilhe</span>
+				<span><a href="http://twitter.com/intent/tweet?text={{ .Title }}&url={{ .Permalink }}&via=Ubunterobr&related=Ubunterobr" title="Twittar" width="24" rel="nofollow" target="_blank"><img src="{{ .Site.BaseURL }}/images/ubuntero/icon-twitter.png" alt="Twittar" width="24" /></a> <a href="http://www.facebook.com/share.php?v=4&src=bm&u={{ .Permalink }}&t={{ .Title }}" title="Compartilhar no Facebook" rel="nofollow" target="_blank"><img src="{{ .Site.BaseURL }}/images/ubuntero/icon-facebook.png" alt="Curtir" width="24"/>
+				</a> <a href="https://plus.google.com/share?url={{ .Permalink }}" title="Compartilhar no Google Plus" rel="nofollow" target="_blank"><img src="{{ .Site.BaseURL }}/images/ubuntero/icon-googleplus.png" alt="Google Plus" width="24" /></a></span>
+				<span><iframe src="http://www.facebook.com/plugins/like.php?href={{ .Permalink }}&amp;layout=button_count&amp;show_faces=false&amp;width=85&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:85px; height:20px; margin-top:7px;"></iframe></span>
+				<span style="margin-top:7px;">
+				<script type="text/javascript">
+					window.___gcfg = {lang: 'pt-BR'};
+					(function() {
+						var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+						po.src = 'https://apis.google.com/js/plusone.js';
+						var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+					})();
+					</script>
+					<g:plusone size="medium"></g:plusone>
+				</span>
+			</div>
+
+			<div class="autor">
+				<img src="{{ .Site.BaseURL }}/images/author/{{ .Params.Author }}.jpg" width="80" alt="{{ .Params.Author }}" class="autorimg" />
+				<p><a href="{{ "/author/" | relLangURL }}{{ .Param "author" | urlize }}" title="Mais Publicações do autor {{ .Params.Author }}">{{ .Params.Author }}</a></p>
+				{{ $author := .Params.Author }}
+				{{ if eq .Params.Author $author }}
+				<p>{{ .Site.Params.Ivan }}</p>
+				{{ end }}
+				<p><a class="left autorsocial autortwitter" href="{{ .Params.AuthorTwitter }}" title="Twitter"></a> <a class="left autorsocial autorfacebook" href="{{ .Params.AuthorTwitter }}" title="Facebook"></a> <a class="left autorsocial autorgoogleplus" href="{{ .Params.AuthorTwitter }}?rel=author" target="_blank" title="Google Plus"></a> <span class="right">
+					<a href="{{ "/author/" | relLangURL }}{{ .Param "author" | urlize }}" alt="{{ .Params.Author }}" >Mais posts do autor</a> </span></p>
+			</div>
+
+			{{ partial "ads/adsbottom.html" . }}
+
+					<div class="related-posts">
+						<h3>Posts relacionados</h3>
+					{{ range first 4 ( where ( where .Site.Pages.ByDate.Reverse ".Params.categories" "intersect" .Params.categories ) "Permalink" "!=" .Permalink ) }}
+						<div class="related">
+							<a href="{{ .Permalink }}" rel="bookmark" title="{{ .Title }}"><img src="{{ .Site.BaseURL}}{{ .Site.Params.ImagePost }}" width="120" alt="Ubuntero - Dicas e Tutoriais sobre Ubuntu"/><p>{{ .Title }}</p></a>
+						</div>
+						{{ end }}
+						<div class="clear"></div>
+					</div>
+		</div>
+
+ <!-- Comentários -->
+ {{ partial "global/comentarios.html" . }}
+	</div>
+
+{{ partial "global/sidebar.html" . }}
+
+{{ partial "global/footer.html" . }}

@@ -1,0 +1,52 @@
+{{ partial "global/header.html" . }}
+
+	<div id="content">
+    {{ if $.Scratch.Get "category" }}
+    <div class="post">
+			<h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
+    </div>
+    {{else}}
+    <div class="post">
+			<h1>Postagens na tag: <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
+    </div>
+    {{ end }}
+
+		{{ range (.Paginator 10).Pages }}
+		<div class="post">
+			<h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
+
+			<div class="entry-meta">
+				<div class="commentbalao sprite">#</div>
+			</div>
+
+			<div class="entry">
+				{{ .Summary }}
+			</div>
+
+			<div class="post-utility">
+				<p>Tags: {{ with .Params.Tags }} {{ range .}} <a href="/tags/{{ . | urlize }}">{{ . }}</a>,  {{ end }} {{ end }}</p>
+			</div>
+
+			<div class="entry-meta">
+				<p><span style="padding-bottom:15px;">Por <a href="{{ "/author/" | relLangURL }}{{ .Param "author" | urlize }}" title="Mais posts de {{ "/author/" | relLangURL }}{{ .Param "author" | urlize }}">{{ .Params.Author }}</a> em {{ .Date.Format "2 de Jan de 2006" }} | <a href="{{ .Permalink }}">Comente</a> | Divulgue</span> <a href="http://twitter.com/intent/tweet?text={{ .Permalink }}&url={{ .Permalink }}&via=Ubunterobr&related=Ubunterobr" title="Twittar" width="24" rel="nofollow" target="_blank"><img src="{{ .Site.BaseURL}}/dist/images/icon-twitter.png" alt="Twittar" width="24" /></a> <a href="http://www.facebook.com/share.php?v=4&src=bm&u={{ .Permalink }}&t={{ .Title }}" title="Curtir" rel="nofollow" target="_blank"><img src="{{ .Site.BaseURL}}/dist/images/icon-facebook.png" alt="Curtir" width="24" /></a> <a href="https://plus.google.com/share?url={{ .Permalink }}" title="Compartilhar no Google Plus" rel="nofollow" target="_blank"><img src="{{ .Site.BaseURL }}/dist/images/icon-googleplus.png" alt="Google Plus" width="24" /></a></p>
+			</div>
+		</div>
+
+		{{ end }}
+		{{ partial "ads/adsmiddle.html" . }}
+
+<div class="paginacao">
+	{{ if .Paginator.HasPrev }}
+	<a href="{{ .Paginator.Prev.URL }}" class="current" rel="nofollow"> << Anterior </a>
+	{{ end }}
+	<span class="current">...</span>
+	Página: <span class="current">{{ .Paginator.PageNumber }}</span> de <span class="current">{{ .Paginator.TotalPages }}</span>
+	<span class="current">...</span>
+	{{ if .Paginator.HasNext }}
+	<a href="{{ .Paginator.Next.URL }}" class="current" rel="nofollow"> Próximo >> </a>
+	{{ end }}
+	</div>
+	</div>
+{{ partial "global/sidebar.html" . }}
+
+{{ partial "global/footer.html" . }}

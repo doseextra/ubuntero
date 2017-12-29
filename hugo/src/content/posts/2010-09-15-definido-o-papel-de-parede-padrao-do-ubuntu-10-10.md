@@ -1,0 +1,31 @@
+---
+title: Definido o papel de parede padrão do Ubuntu 10.10
+author: Ivan Brasil Fuzzer
+type: post
+date: 2010-09-15T12:04:33+00:00
+url: /definido-o-papel-de-parede-padrao-do-ubuntu-10-10/
+categories:
+  - Ubuntu
+
+---
+Atualizações da versão 10.10 beta hoje trouxeram o que deve ser o novo papel de parede padrão do Ubuntu 10.10, veja abaixo:
+
+<p style="text-align: center;">
+  <a href="http://www.ubuntero.com.br/wp-content/uploads/2010/09/warty-final-ubuntu.jpg"><img class="alignnone size-medium wp-image-1064" title="warty-final-ubuntu" src="http://www.ubuntero.com.br/wp-content/uploads/2010/09/warty-final-ubuntu-300x200.jpg" alt="" width="300" height="200" /></a>
+</p>
+
+<p style="text-align: left;">
+  Caso queira, abaixo seguem os outros papéis de parede disponíveis para a próxima versão do Ubuntu que será lançada no dia 10 de outubro.
+</p>
+
+<p style="text-align: center;">
+  <a href="http://www.ubuntero.com.br/wp-content/uploads/2010/09/Aeg_by_Tauno_Erik.jpg"><img class="alignnone size-thumbnail wp-image-1065" title="Aeg_by_Tauno_Erik" src="http://www.ubuntero.com.br/wp-content/uploads/2010/09/Aeg_by_Tauno_Erik-150x99.jpg" alt="" width="150" height="99" /></a> <a href="http://www.ubuntero.com.br/wp-content/uploads/2010/09/Blue_box_number_2_by_orb9220.jpg"><img class="alignnone size-thumbnail wp-image-1066" title="Blue_box_number_2_by_orb9220" src="http://www.ubuntero.com.br/wp-content/uploads/2010/09/Blue_box_number_2_by_orb9220-150x94.jpg" alt="" width="150" height="94" /></a> <a href="http://www.ubuntero.com.br/wp-content/uploads/2010/09/Blue_by_ElSlunko.jpg"><img class="alignnone size-thumbnail wp-image-1067" title="Blue_by_ElSlunko" src="http://www.ubuntero.com.br/wp-content/uploads/2010/09/Blue_by_ElSlunko-150x99.jpg" alt="" width="150" height="99" /></a> <a href="http://www.ubuntero.com.br/wp-content/uploads/2010/09/Bubbles_by_JanneM.jpg"><img class="alignnone size-thumbnail wp-image-1068" title="Bubbles_by_JanneM" src="http://www.ubuntero.com.br/wp-content/uploads/2010/09/Bubbles_by_JanneM-150x128.jpg" alt="" width="150" height="128" /></a> <a href="http://www.ubuntero.com.br/wp-content/uploads/2010/09/Crocosmia_by_sirpecangum.jpg"><img class="alignnone size-thumbnail wp-image-1069" title="Crocosmia_by_sirpecangum" src="http://www.ubuntero.com.br/wp-content/uploads/2010/09/Crocosmia_by_sirpecangum-150x99.jpg" alt="" width="150" height="99" /></a> <a href="http://www.ubuntero.com.br/wp-content/uploads/2010/09/Feather_by_quinn.anya_.jpg"><img class="alignnone size-thumbnail wp-image-1070" title="Feather_by_quinn.anya" src="http://www.ubuntero.com.br/wp-content/uploads/2010/09/Feather_by_quinn.anya_-150x99.jpg" alt="" width="150" height="99" /></a> <a href="http://www.ubuntero.com.br/wp-content/uploads/2010/09/Fern_by_aalex04.jpg"><img class="alignnone size-thumbnail wp-image-1071" title="Fern_by_aalex04" src="http://www.ubuntero.com.br/wp-content/uploads/2010/09/Fern_by_aalex04-150x100.jpg" alt="" width="150" height="100" /></a><a href="http://www.ubuntero.com.br/wp-content/uploads/2010/09/Life_by_Paco_Espinoza.jpg"><img class="alignnone size-thumbnail wp-image-1072" title="Life_by_Paco_Espinoza" src="http://www.ubuntero.com.br/wp-content/uploads/2010/09/Life_by_Paco_Espinoza-150x112.jpg" alt="" width="150" height="112" /></a> <a href="http://www.ubuntero.com.br/wp-content/uploads/2010/09/Liquid_glass_by_matthileo.jpg"><img class="alignnone size-thumbnail wp-image-1073" title="Liquid_glass_by_matthileo" src="http://www.ubuntero.com.br/wp-content/uploads/2010/09/Liquid_glass_by_matthileo-150x99.jpg" alt="" width="150" height="99" /></a> <a href="http://www.ubuntero.com.br/wp-content/uploads/2010/09/Mirada_Perduda_by_Marxicoli.jpg"><img class="alignnone size-thumbnail wp-image-1074" title="Mirada_Perduda_by_Marxicoli" src="http://www.ubuntero.com.br/wp-content/uploads/2010/09/Mirada_Perduda_by_Marxicoli-150x112.jpg" alt="" width="150" height="112" /></a> <a href="http://www.ubuntero.com.br/wp-content/uploads/2010/09/Morning_II_by_Tadas_N.jpg"><img class="alignnone size-thumbnail wp-image-1075" title="Morning_II_by_Tadas_N" src="http://www.ubuntero.com.br/wp-content/uploads/2010/09/Morning_II_by_Tadas_N-150x100.jpg" alt="" width="150" height="100" /></a> <a href="http://www.ubuntero.com.br/wp-content/uploads/2010/09/Primer_Amanecer_2010_by_letoloke.jpg"><img class="alignnone size-thumbnail wp-image-1076" title="SONY DSC" src="http://www.ubuntero.com.br/wp-content/uploads/2010/09/Primer_Amanecer_2010_by_letoloke-150x100.jpg" alt="" width="150" height="100" /></a> <a href="http://www.ubuntero.com.br/wp-content/uploads/2010/09/Ropey_Photo_by_Bob_Farrell.jpg"><img class="alignnone size-thumbnail wp-image-1077" title="Ropey_Photo_by_Bob_Farrell" src="http://www.ubuntero.com.br/wp-content/uploads/2010/09/Ropey_Photo_by_Bob_Farrell-150x100.jpg" alt="" width="150" height="100" /></a> <a href="http://www.ubuntero.com.br/wp-content/uploads/2010/09/Serenity_Enchanted_by_sirpecangum.jpg"><img class="alignnone size-thumbnail wp-image-1078" title="Serenity_Enchanted_by_sirpecangum" src="http://www.ubuntero.com.br/wp-content/uploads/2010/09/Serenity_Enchanted_by_sirpecangum-150x112.jpg" alt="" width="150" height="112" /></a> <a href="http://www.ubuntero.com.br/wp-content/uploads/2010/09/Smile_by_quinn.anya_.jpg"><img class="alignnone size-thumbnail wp-image-1079" title="Smile_by_quinn.anya" src="http://www.ubuntero.com.br/wp-content/uploads/2010/09/Smile_by_quinn.anya_-150x99.jpg" alt="" width="150" height="99" /></a> <a href="http://www.ubuntero.com.br/wp-content/uploads/2010/09/Spiral_by_firas.jpg"><img class="alignnone size-thumbnail wp-image-1080" title="Spiral_by_firas" src="http://www.ubuntero.com.br/wp-content/uploads/2010/09/Spiral_by_firas-150x112.jpg" alt="" width="150" height="112" /></a> <a href="http://www.ubuntero.com.br/wp-content/uploads/2010/09/Waterchain_by_Poje_Mario.jpg"><img class="alignnone size-thumbnail wp-image-1081" title="Waterchain_by_Poje_Mario" src="http://www.ubuntero.com.br/wp-content/uploads/2010/09/Waterchain_by_Poje_Mario-150x99.jpg" alt="" width="150" height="99" /></a>
+</p>
+
+<p style="text-align: left;">
+  Se preferir, faça o download do pacote com todos os papéis de parede, incluindo as duas &#8220;animações&#8221; abaixo:
+</p>
+
+<p style="text-align: left;">
+  <!--download id="25"-->
+</p>

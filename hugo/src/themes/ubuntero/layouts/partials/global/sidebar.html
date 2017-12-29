@@ -1,6 +1,5 @@
 <div id="sidebar">
 
-
 	<div id="social" class="group">
 		<div id="social-rss" class="social-box float-left social-box-margin">
 			<p><a class="sprite trans" href="{{ .Site.Params.Feed }}" title="Assinar Feed RSS"></a></p>
@@ -21,7 +20,10 @@
 
 	<div class="side-box">
 		<h3>Busca</h3>
-		<?php get_search_form(); ?>
+		<form method="get" id="site-searchform" class="searchform" action="http://www.google.com/search" accept-charset="UTF-8" role="search">
+			<input type="search" name="q" autocomplete="on" placeholder="Pesquisar&hellip;" style="width:100%">
+			<input type="hidden" name="sitesearch" value="{{ .Site.BaseURL }}">
+		</form>
 	</div>
 
 	<div class="adssidebar">
@@ -41,7 +43,9 @@
 	<div class="side-box">
 		<h3>Últimas novidades</h3>
 		<ul>
-			<?php get_archives('postbypost', 10); ?>
+			{{ range first 6 (where .Site.Pages "Type" "post") }}
+			<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+			{{ end }}
 		</ul>
 	</div>
 
@@ -51,20 +55,9 @@
 			<label>
 			<select onchange="document.location.href=this.options[this.selectedIndex].value;">
 				<option value="" style="font-weight:bold;">Selecione o episódio</option>
-				<?php
-				/*
-				$cont = 0;
-				$exibir = 5; // numero de ítens que devem ser exibidos
-				foreach(simplexml_load_file('http://www.ubuntero.com.br/feed/opencast/')->channel->item as $item) {
-					if($cont < $exibir) {
-						echo sprintf('<option value="%s" title="%s">%s</option>', $item->link, $item->title, $item->title);
-				$cont++;
-					}
-				}*/
-				foreach(simplexml_load_file('http://www.ubuntero.com.br/feed/opencast/')->channel->item as $item) {
-					echo sprintf('<option value="%s" title="%s">%s</option>', $item->link, $item->title, $item->title);
-				}
-				?>
+
+				<option value="https://tecnologiaaberta.com.br" title="{{ .Title }}">Tecnologia Aberta</option>
+
 			</select>
 			</label>
 		</form>
@@ -110,8 +103,16 @@
 		<form action="" class="side-archives">
 			<label>
 			<select onchange="document.location.href=this.options[this.selectedIndex].value;">
-				<option value="" style="font-weight:bold;">Selecione o Mês</option>
-				<?php get_archives('monthly','','option'); ?>
+				<option value="" style="font-weight:bold;">Selecione a categoria</option>
+				{{ with .Params.Categories }}
+				{{ range .}}
+				<option value="/categories/{{ . | urlize }}">{{ . }}</option>
+				{{ end }}
+				{{ else }}
+				{{ range last 10 (where .Site.Pages "Type" "post") }}
+				<option value="{{ .Permalink }}">{{ .Title }}</option>
+				{{ end }}
+				{{ end }}
 			</select>
 			</label>
 		</form>
@@ -119,23 +120,7 @@
 
 	<div class="side-box">
 		<h3>Youtube UbunteroBR</h3>
-		<?php
-		$channel_name	=	'ubunterobr';//Be sure to change this to your channel
-		$count			=	1;//# of videos you want to show (MAX = 20)
-		$em_width		=	295;//width of embedded player
-		$em_height		=	250;//height of embedded player
-
-		//The output...
-		$sxml = simplexml_load_file("http://gdata.youtube.com/feeds/api/users/$channel_name/uploads?max-results=$count");
-		foreach ($sxml->entry as $entry) {
-			$vidKey = substr(strrchr($entry->id,'/'),1);
-			echo '
-			<div class="tcenter">
-				<iframe width="'.$em_width.'" height="'.$em_height.'" src="http://www.youtube.com/embed/'.$vidKey.'" frameborder="0" allowfullscreen></iframe>
-			</div>
-			';
-		}
-		?>
+		<iframe width="100%" height="100%" src="https://www.youtube.com/embed/d4vhzJnGZ4A" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 		<ul>
 			<li><a href="http://www.youtube.com/user/ubunterobr" title="Canal do Ubuntero no Youtube" target="_blank">Canal do Ubuntero no Youtube</a></li>
 		</ul>
@@ -143,17 +128,21 @@
 
 	<div class="side-box">
 		<h3>Divulgue nosso Banner</h3>
-		<p style="text-align:center; padding-bottom:10px;"><img class="banner-blog" src="<?php bloginfo('template_directory'); ?>/images/ubuntero-120x50.jpg" alt="ferramentas blog banner" /><br />
+		<p style="text-align:center; padding-bottom:10px;"><img class="banner-blog" src="{{ .Site.BaseURL}}{{ .Site.Params.ImageUbuntero }}" alt="ferramentas blog banner" /><br />
 <textarea style="width:240px" name="textarea" onmouseover="this.focus()" onfocus="this.select()" rows="3" cols="15">&lt;a href="http://www.ubuntero.com.br/"&gt;
-&lt;img border="0" style="border:1px solid #CCC;" src="<?php bloginfo('template_directory'); ?>/images/ubuntero-120x50.jpg" title="Ubuntero - Dicas e tutorias sobre Ubuntu" alt="Ubuntero.com.br" /&gt;&lt;/a&gt;</textarea>
+&lt;img border="0" style="border:1px solid #CCC;" src="{{ .Site.BaseURL}}{{ .Site.Params.ImageUbuntero }}" title="Ubuntero - Dicas e tutorias sobre Ubuntu" alt="Ubuntero.com.br" /&gt;&lt;/a&gt;</textarea>
 		</p>
 	</div>
 
 	<div class="side-box links">
 		<h3>Links</h3>
+		{{ with .Site.Params.Links }}
 		<ul>
-			<?php get_links(-1, '<li>', '</li>', ' - '); ?>
+			{{ range .}}
+			<li><a href="{{ . }}"> {{ . }}</a></li>
+			{{ end }}
 		</ul>
+		{{ end }}
 	</div>
 
 	<div class="adssidebar">
@@ -170,5 +159,4 @@
 		<!-- LOMADEE - END -->
 	</div>
 
-	<?php endif; ?>
 </div>

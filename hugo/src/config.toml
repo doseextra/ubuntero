@@ -2,3 +2,50 @@ baseURL = "http://ubuntero.com.br/"
 languageCode = "pt-br"
 title = "Ubuntero"
 theme = "ubuntero"
+
+[params]
+  Ivan = "Faço parte do grupo Tchelinux(http://www.tchelinux.org). O Tchelinux é um grupo de voluntários que trabalha com software livre e ainda acredita que boas coisas podem ser feitas nesta comunidade; desde que saibamos repassar aos que estão iniciando que Software Livre é um aprender e repassar o conhecimento incessante. Sou líder do Ubuntu-BR-RS juntamente com a Marta Vuelma. Tentamos divulgar a distribuição e auxiliar novos usuários por todo o estado do Rio Grande do Sul, as vezes em outros estados também. Sou um amante incondicional de software livre. Vivo apaixonado pelo Ubuntu."
+  ImagePost = "/images/ubuntero/ubuntero_144.png"
+  ImageUbuntero = "/images/ubuntero/ubuntero.jpg"
+  links = ["http://tecnologiaaberta.com.br","http://dtumelero.blogspot.com.br/","http://www.diolinux.com.br/","http://mundoandre.wordpress.com/","http://www.tchelinux.org/blog/","http://tiagohillebrandt.eti.br/blog/","http://ubuntudicas.com.br/","http://www.ubuntugames.org/","http://planeta.ubuntu-br.org/","http://www.ubuntubrsc.com/", "http://www.ubuntued.info/"]
+  description = "Tudo sobre o sistema operacional GNU/Linux"
+  SiteName = "Ubuntero BR"
+
+
+[permalinks]
+  paginas = "/:filename"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  author = "author"
+
+[[menu.main]]
+  name = "Home"
+  weight = -110
+  identifier = "home"
+  url = "/"
+
+[[menu.main]]
+  name = "Downloads"
+  weight = -100
+  identifier = "downloads"
+  url = "/downloads/"
+
+[[menu.main]]
+  name = "Quer ajudar?"
+  weight = -90
+  identifier = "ajude"
+  url = "/ajude/"
+
+[[menu.main]]
+  name = "Sobre o Ubuntero"
+  weight = -80
+  identifier = "sobre"
+  url = "/sobre-mim/"
+
+[[menu.main]]
+  name = "Store"
+  weight = -70
+  identifier = "store"
+  url = "/store/"

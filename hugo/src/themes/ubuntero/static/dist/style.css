@@ -177,6 +177,9 @@ code { padding: 2px 5px; }
 .entry-meta p, .post-utility p { font-size:80%; color:#686868; font-style:italic; line-height:30px; }
 .entry-meta img { vertical-align: bottom; margin-left:5px; }
 
+.entry img {
+	max-width: 100%;
+}
 .post-utility { border-top:1px dotted #ccc; margin-top:5px; padding-top:5px; }
 
 .wp-post-image { float:left; margin:5px 5px 10px 0; }
